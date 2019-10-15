@@ -1,0 +1,11 @@
+<h1>Your Recipes</h1>
+
+<ol>
+<% @recipes.each_with_index do |recipe, index| %>
+<li>
+ <%= "#{recipe.name}" %>&ensp;&ensp;
+ <a href="/recipes/<%= index %>" method="GET">Destroy</a>
+</li>
+  <% end %>
+</ol>
+<a href="/new">Create a new recipe</a>
